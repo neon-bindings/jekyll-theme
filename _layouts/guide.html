@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<main class="page-content guide" aria-label="Content">
+    <aside class="sidebar">
+        <nav class="guide-toc" aria-label="table of contents">
+            <ol>
+                {% assign sorted_guides = (site.guides | sort: 'nav-order') %}
+                {% for guide in sorted_guides %}
+                    <li><a href="{{ guide.url }}">{{ guide.nav-title }}</a></li>
+                {% endfor %}
+            </ol>
+        </nav>
+    </aside>
+
+    <article>
+        {{ content }}
+    </article>
+</main>
