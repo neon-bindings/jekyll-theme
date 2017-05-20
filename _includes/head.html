@@ -13,4 +13,16 @@
   {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}
   {% endif %}
+
+  <script src="{{ "/assets/jquery-3.2.1.slim.min.js" | relative_url }}"></script>
+  <script>
+    $(function() {
+      $('.toggle > h1, .toggle > h2, .toggle > h3, .toggle > h4, .toggle > h5, .toggle > h6').each(function(index) {
+        var label = $(this);
+        label.on('click', function() {
+          label.parent().toggleClass('toggle-disabled');
+        });
+      });
+    });
+  </script>
 </head>

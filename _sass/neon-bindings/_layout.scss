@@ -171,6 +171,31 @@
         color: #a63931;
       }
     }
+
+    .toggle {
+      &>h1, &>h2, &>h3, &>h4, &>h5, &>h6 {
+        cursor: pointer;
+        &::before {
+          content: "▼";
+          display: inline-block;
+          width: 1.2em;
+        }
+      }
+    }
+
+    .toggle-disabled {
+      &>:not(:matches(h1, h2, h3, h4, h5, h6)) {
+        display: none;
+      }
+
+      &>h1, &>h2, &>h3, &>h4, &>h5, &>h6 {
+        &::before {
+          content: "▶";
+          display: inline-block;
+          width: 1.2em;
+        }
+      }
+    }
   }
 }
 
