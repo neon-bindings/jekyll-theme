@@ -313,6 +313,15 @@
         @include font-smoothing;
       }
 
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        font-size: 36px;
+      }
+
       p#overview {
         margin-bottom: 0.25em;
       }
